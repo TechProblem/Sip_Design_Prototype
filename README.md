@@ -1,5 +1,13 @@
 # Sip_Design_Prototype
+# Mason Griffith
+# SIP311
+# 8/18/2025
+# Long Time Tutorial Plugin
 <img width="448" height="283" alt="image" src="https://github.com/user-attachments/assets/521a3b4a-3805-4e82-a30b-0b31fa3c300f" />
+
+This prototype is what my project will look like but instead of being a script, it will be a plugin. As this only demonstrates the functions of my plugin but on a smaller scale. What you see above is an image of what my script will show to the developer, with the threshold of time, the path to the text file where the information is stored (It does not work yet, as I have the full path hard-coded), and the custom script option which will let the developer implement their own features into the game by activating a script or scene (this also does not work yet due to the prototype being a script, but when it gets turned into a plugin, there is more access to the game that can be customized).
+
+What you see below is the code to said script, as it displays my thought process going into the prototype and designing it, including some mistakes and some breakthroughs, you can also see the file within /ASSETS/SCRIPTS/CHECKTIME.CS. I will be working on this project periodically each week and documenting my journey, as this project will take much research and figuring out as I am new to plugins for game engines. 
 
         using System;
         using System.Collections.Generic;
