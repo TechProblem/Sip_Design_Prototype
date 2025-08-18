@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // This script is used to check the time in Unity
 
@@ -21,9 +22,11 @@ public class checkTime : MonoBehaviour
 
         public static void CreateFile()
         {
-            string directoryPath = "/Assets/Resources/";
+            string directoryPath = ".../Assets/Resources/";
             string fileName = "Time.txt";
             string fullPath = Path.Combine(directoryPath, fileName);
+            // print the full path for debugging
+            Debug.Log("Creating file at path: " + fullPath);
 
             // Ensure the directory exists
             if (!Directory.Exists(directoryPath))
@@ -48,11 +51,14 @@ public class checkTime : MonoBehaviour
                 // If the file does not exist, create it
                 Debug.Log("File does not exist, creating file.");
                 CreateFile();
+                WriteTime(System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")); // Write the current time to the file
             }
             else
             {
                 // If the file exists, log a message
                 Debug.Log("File exists.");
+                // print where the file is located
+                Debug.Log("File is located at: " + path);
 
             }
         }
@@ -88,8 +94,6 @@ public class checkTime : MonoBehaviour
             EachTime.Add(minutes);
             EachTime.Add(seconds);
             return EachTime;
-
-
         }
 
         public static string ThresholdCalc(int Threshold_years, int Threshold_months, int Threshold_days, int Threshold_hours, int Threshold_minutes, int Threshold_seconds, List<int> EachTime)
@@ -125,8 +129,9 @@ public class checkTime : MonoBehaviour
     public int Threshold_hours;
     public int Threshold_minutes;
     public int Threshold_seconds;
-
-    public static string path = "C:/Users/Mason/Documents/UnityGames/Sip Prototype/Assets/Resources/Time.txt";
+    public GameObject Custom_Scripts;
+    public string path_time;
+    public static string path = ".../Assets/Resources/Time.txt";
     void Awake()
     {
 

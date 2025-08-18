@@ -169,6 +169,7 @@ MonoBehaviour:
   Threshold_hours: 0
   Threshold_minutes: 0
   Threshold_seconds: 10
+  path_time: 
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
