@@ -23,7 +23,7 @@
     
             public static void CreateFile()
             {
-                string directoryPath = "C:/Users/Mason/Documents/UnityGames/Sip Prototype/Assets/Resources/";
+                string directoryPath = "/Assets/Resources/";
                 string fileName = "Time.txt";
                 string fullPath = Path.Combine(directoryPath, fileName);
     
